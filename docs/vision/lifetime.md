@@ -59,7 +59,7 @@ In the Polkadot ecosystem, the parachain state is maintained by parachain collat
 
 Parachains on Polkadot do not replicate their full state on Polkadot. Instead, only the state root of DropIt is permanently stored on the relay chain.
 
-This means no matter how heavy or bloated DropIt becomes, the Polkadot ecosystem will be unaffected by this
+This means no matter how heavy or bloated DropIt becomes, the Polkadot itself will be unaffected.
 
 ### Disposing
 

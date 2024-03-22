@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Lifetime
 
 DropIt is unique in the Polkadot ecosystem in that it is designed to be **ephemeral**.
@@ -47,6 +43,38 @@ Many other blockchains subsidize the costs of their chain and don't consider lon
 
 ## Disposable Parachains
 
+Polkadot is uniquely capable of supporting chains without consideration for storage deposits through the creation of disposable parachains.
+
+TODO: perhaps reframe this concept from the term "disposable"
+
 > See the original Polkadot Forum post: [Disposable Parachains (for Airdrops and other ideas)](https://forum.polkadot.network/t/disposable-parachains-for-airdrops-and-other-ideas/5769).
 
-Polkadot is uniquely capable of supporting chains
+### Data Sharding
+
+Polkadot scales through data and execution sharding. In the context of state scaling, each parachain is responsible to host its own data, and present relevant data needed to execute a block to Polkadot in order for Polkadot to verify the validity of the block.
+
+In the Polkadot ecosystem, the parachain state is maintained by parachain collators. Because collators do not provide any security to Polkadot or the parachain, they can be run by anyone. Only a single copy of the parachain state needs to exist in order to produce new blocks, which allows storage bloat to have a significantly lower impact to the overall network. See [block production](./block-production.md).
+
+### Parachain Footprint
+
+Parachains on Polkadot do not replicate their full state on Polkadot. Instead, only the state root of DropIt is permanently stored on the relay chain.
+
+This means no matter how heavy or bloated DropIt becomes, the Polkadot ecosystem will be unaffected by this
+
+### Disposing
+
+Since DropIt is designed without consideration for [state bloat](#state-bloat), the cost for running nodes may increase rapidly.
+
+Because DropIt has completely permissionless and open [block production](./block-production.md), it is up to the collators themselves to determine if it is valuable to continue to run the network.
+
+When all potential collators decide they no longer want to run the network the chain will stop producing blocks. If in the future, anyone wants to submit new transactions to the chain, they can spin up their own collator and build a new block.
+
+### Token Migration
+
+Since DropIt is designed to be ephemeral, it is not suggested that tokens permanently live in the DropIt chain.
+
+When a token accrues enough value or importance to users, it is recommended that the token is teleported to permanent chains like the Polkadot's Asset Hub.
+
+In this case, users will need to establish an existential deposit to hold the token, but the user should find greater value in the token itself.
+
+Also, it is possible for the Polkadot Governance to make a token "sufficient", meaning that users would be able to hold the token on the Asset Hub without any existential deposit, however the barrier for these kinds of tokens are quite high.

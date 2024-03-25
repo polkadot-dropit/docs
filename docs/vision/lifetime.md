@@ -10,9 +10,9 @@ To understand what this means, you need to understand a few topics.
 
 [State bloat](https://www.techopedia.com/definition/blockchain-bloat) is one of the key long term scaling issues of blockchain systems. As the chain grows, accessing items in the database become more complex due to the construction of the Merkle trie. Also running a full node for the chain becomes more expensive as more storage space is needed to keep the current state of the chain.
 
-Chain's like Bitcoin are plagued with ["dust accounts"](https://bitcoinwiki.org/wiki/cryptocurrency-dust) whose balance is lower than the cost of transaction fees needed to move those balances. Thus these accounts will likely congest the network's Merkle trie forever, and result in a decrease of performance and an increase of costs when running Bitcoin nodes.
+Chain's like Ethereum are plagued with ["dust accounts"](https://github.com/ethereum/EIPs/issues/168) whose balance is lower than the cost of transaction fees needed to move those balances. Thus these accounts will likely congest the network's Merkle trie forever, and result in a decrease of performance and an increase of costs when running nodes.
 
-Chain's like Ethereum face similar state scaling issues related to the presence of unused smart contracts and smart contract state. For example, when users push a "Hello, World!" smart contract to Ethereum, they pay a one time fee at the time of the contract deployment, but then those contracts live in the chain state forever, even when they are not being used.
+Ethereum also faces state scaling issues related to the presence of unused smart contracts and smart contract state. For example, when users push a "Hello, World!" smart contract to Ethereum, they pay a one time fee at the time of the contract deployment, but then those contracts live in the chain state forever, even when they are not being used.
 
 ## Storage Deposits
 

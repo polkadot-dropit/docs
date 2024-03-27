@@ -67,7 +67,7 @@ Since DropIt is designed without consideration for [state bloat](#state-bloat), 
 
 Because DropIt has completely permissionless and open [block production](./block-production.md), it is up to the collators themselves to determine if it is valuable to continue to run the network.
 
-When all potential collators decide they no longer want to run the network the chain will stop producing blocks. If in the future, anyone wants to submit new transactions to the chain, they can spin up their own collator and build a new block.
+When all potential collators decide they no longer want to run the network the chain will stop producing blocks. If in the future, anyone wants to submit new transactions to the chain, they can spin up their own collator and build a new block, assuming they can get access to the last finalized state.
 
 ### Token Migration
 
